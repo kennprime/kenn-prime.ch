@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+    font-family: 'Poopins', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 50%;
+}
+
+.wrapper {
+    background: linear-gradient(180deg, rgba(75,94,144,1) 12%, rgba(26,14,23,1) 89%);    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    }
+
+header {
+    padding: 50px 0;
+}
+
+header .logo {
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    color: #7a058a;
+}
+
+header nav {
+    float: right;
+    width: 50%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #ffffff
+}
+
+header nav ul li.active::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #7702e4;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -15px;
+}
+
+header nav ul li:not(.active):not(.btn) a:hover {
+    border-bottom: 5px solid #59035c;
+}
+
+header nav ul li.btn a {
+    background: #2204a8;
+    padding: 9px 17px;
+    border-radius: 5px;
+    transition: all 500ms ease;
+}
+
+header nav ul li.btn a:hover {
+    background: #ae08cf;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    color: #cf8ef5;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero--info h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #350563;
+}
+
+.hero--info p {
+    font-weight: 500;
+    line-height: 170%;
+    margin: 30px 0;
+}
+
+.hero--info .btn {
+    background: #2d044e;
+    color: #df6ee9;
+    border-radius: 50px;
+    padding: 15px 50px;
+    border: 0;
+    transition: all 500ms ease;
+    font-size: 17px;
+}
+
+.hero--info .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.hero img {
+    position: absolute;
+    top: -150px;
+    right: 0;
+}
+
+img {
+    position: absolute;
+    margin-top: 400px;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+  }
+  
+.img {
+    opacity: 0; 
+    animation: fadeIn 2.5s ease-in-out forwards;
+  }
+  
+  
+@keyframes fadeIn {
+    from {
+        opacity: 0; 
+    }
+    to {
+        opacity: 1; 
+    }
+}
+
+
+img {
+    opacity: 0; 
+    animation: fadeIn 10s ease-out forwards; 
+}
+
+a {
+    color: #dd77e0; 
+}
+ 
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+h2 {
+    transform-origin: bottom; /* Устанавливаем точку увеличения в нижнюю часть */
+    transform: scale(0); /* Начальное состояние */
+    animation: zoomIn 3s ease-in-out forwards; /* Увеличение при загрузке */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+p {
+    color: #10a1ce; /* Устанавливаем цвет текста */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+@keyframes fadeInZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  button {
+    opacity: 0; /* Начальное состояние - скрыто */
+    transform: scale(0); /* Начальное состояние - уменьшено */
+    animation: fadeInZoom 3s ease-out forwards; /* Применяем анимацию */
+    padding: 10px 20px;
+    background-color: #2805c0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+  }
+
+  @keyframes fadeInSlide {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Смещение вниз */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Возвращение в исходное положение */
+    }
+  }
+  
+  /* Базовые стили для элементов списка */
+  li {
+    opacity: 0; /* Начальное состояние: элемент невидим */
+    animation: fadeInSlide 4s ease-out forwards;
+  }
+  
+  /* Задержка для последовательного появления элементов */
+  li:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  li:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  li:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  /* Можно добавить больше задержек для остальных элементов */
+  
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+  
+  h1 {
+    opacity: 0;
+    animation: slideIn 5s ease-out forwards;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  p.bounce {
+    animation: bounce 5s ease;
+  }
+  
+  @keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  p {
+    opacity: 0;
+    animation: slideIn 10s ease-out forwards;
+  }
+
+  @keyframes flipIn {
+    from {
+      transform: perspective(600px) rotateY(90deg);
+      opacity: 0;
+    }
+    to {
+      transform: perspective(600px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .logo {
+    transform-origin: left;
+    animation: flipIn 4s ease-out forwards;
+  }
+  
